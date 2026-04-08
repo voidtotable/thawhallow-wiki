@@ -10,11 +10,11 @@ features:
 ingress:
   rules:
   - component:
-      name: blog
+      name: thawhallow-wiki
     match:
       path:
         prefix: /
-name: Thawhallow Wiki
+name: thawhallow-wiki
 region: nyc
 static_sites:
 - github:
