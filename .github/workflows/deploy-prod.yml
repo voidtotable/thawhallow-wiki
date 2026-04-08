@@ -20,7 +20,10 @@ jobs:
         with:
           mdbook-version: 'latest'
 
-      - run: mdbook build 
+      - run: | 
+          mdbook build -d publish
+          git checkout -b publish
+          git push
 
       - name: Deploy the app
         uses: digitalocean/app_action/deploy@v2

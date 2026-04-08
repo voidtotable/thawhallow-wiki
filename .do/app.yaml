@@ -18,7 +18,7 @@ name: thawhallow-wiki
 region: nyc
 static_sites:
 - github:
-    branch: main
+    branch: publish
     # this will deploy each time you push (recommended)
     deploy_on_push: true
     repo: voidtotable/thawhallow-wiki
