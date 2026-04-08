@@ -31,7 +31,7 @@ jobs:
 
           git add .
           git commit -m "Github Action Job ID: ${{ github.job}}"
-          git push --set-upstream origin publish
+          git push -f --set-upstream origin publish
 
       - name: Deploy the app
         uses: digitalocean/app_action/deploy@v2
