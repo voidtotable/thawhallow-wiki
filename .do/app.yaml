@@ -23,5 +23,5 @@ static_sites:
     deploy_on_push: true
     repo: voidtotable/thawhallow-wiki
   name: thawhallow-wiki
-  output_dir: ./publish
+  output_dir: /workspace/build
   source_dir: ./publish
