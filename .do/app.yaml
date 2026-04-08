@@ -17,12 +17,11 @@ ingress:
 name: Thawhallow Wiki
 region: nyc
 static_sites:
-- dockerfile_path: ./Dockerfile
-  github:
+- github:
     branch: main
     # this will deploy each time you push (recommended)
     deploy_on_push: true
     repo: voidtotable/thawhallow-wiki
   name: thawhallow-wiki
   output_dir: /workspace/public
-  source_dir: /
+  source_dir: /book
