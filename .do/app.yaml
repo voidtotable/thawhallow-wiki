@@ -2,26 +2,25 @@ alerts:
 - rule: DEPLOYMENT_FAILED
 - rule: DOMAIN_FAILED
 domains:
-- domain: thawhallow.allisonsierra.dev
+- domain: thawhallow.voidtotable.com
   type: PRIMARY
-  zone: thawhallow.allisonsierra.dev
+  zone: thawhallow.voidtotable.com
 features:
 - buildpack-stack=ubuntu-22
 ingress:
   rules:
   - component:
-      name: blog
+      name: thawhallow-wiki
     match:
       path:
         prefix: /
-name: Thawhallow Wiki
+name: thawhallow-wiki
 region: nyc
 static_sites:
 - github:
-    branch: main
+    branch: publish
     # this will deploy each time you push (recommended)
     deploy_on_push: true
     repo: voidtotable/thawhallow-wiki
   name: thawhallow-wiki
-  output_dir: /workspace/public
-  source_dir: /book
+  source_dir: ./publish

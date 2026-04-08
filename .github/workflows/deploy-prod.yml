@@ -14,13 +14,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{secrets.VTT_GITHUB_TOKEN}}
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v2
         with:
           mdbook-version: 'latest'
 
-      - run: mdbook build 
+      - run: | 
+          git checkout -b publish
+          git config --global user.email "85902135+allisonsierra@users.noreply.github.com"
+          git config --global user.name "Allie Sierra"
+
+          mdbook build -d publish
+
+          git add .
+          git commit -m "Github Action Job ID: ${{ github.job}}"
+          git push -f --set-upstream origin publish
 
       - name: Deploy the app
         uses: digitalocean/app_action/deploy@v2
