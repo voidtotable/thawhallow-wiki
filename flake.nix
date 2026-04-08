@@ -2,7 +2,7 @@
   description = "Thawhallow Wiki";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -13,16 +13,7 @@
           inherit system;
         };
 
-        commonArgs = {
-          inherit src;
-
-          # uncomment if the project is a workspace
-          # pname = "{{ project_name }}";
-          # version = "0.1.0";
-        };
-
-      in
-      rec {
+      in {
 
         # uncomment if there is a binary to be run
         # apps.{{ project_name }} = flake-utils.lib.mkApp {
@@ -32,21 +23,14 @@
         # apps.default = apps.{{ project_name }};
 
         devShells.default = pkgs.mkShell {
-          inputsFrom = builtins.attrValues self.checks.${system};
 
           packages = with pkgs; [
             mdbook
-
-            # Orchestration
             just
-
-            # GitHub tooling
             gh
-
-            # Nix tooling
             nixfmt-rfc-style
           ];
-          PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+          
         };
       });
 }
