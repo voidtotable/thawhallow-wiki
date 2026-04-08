@@ -2,9 +2,9 @@ alerts:
 - rule: DEPLOYMENT_FAILED
 - rule: DOMAIN_FAILED
 domains:
-- domain: thawhallow.allisonsierra.dev
+- domain: thawhallow.voidtotable.com
   type: PRIMARY
-  zone: thawhallow.allisonsierra.dev
+  zone: thawhallow.voidtotable.com
 features:
 - buildpack-stack=ubuntu-22
 ingress:
