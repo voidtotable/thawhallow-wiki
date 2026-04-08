@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{secrets.VTT_GITHUB_TOKEN}}
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v2
