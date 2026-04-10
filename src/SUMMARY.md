@@ -1,9 +1,16 @@
 # Summary
 
-- [Characters](./characters/characters.md)
-  - [Violet Black](./characters/violet-black.md)
+- [Campaign](./campaign/campaign.md)
 - [World](./world.md)
   - [World Map](./world-map.md)
   - [Thawhallow](./thawhallow/thawhallow.md)
     - [Hex Map](./thawhallow/hex-map.md)
     - [Littlebreeze](./thawhallow/littlebreeze.md)
+- [Characters](./characters/characters.md)
+  - [Camembert Doornail](./characters/camembert-doornail.md)
+  - [Lavendar Winter](./characters/lavender-winter.md)
+  - [Mariette van Gogh](./characters/mariette-van-gogh.md)
+  - [Rodney Potatosong](./characters/rodney-potatosong.md)
+  - [Violet Black](./characters/violet-black.md)
+- [In Memorium](./characters/in-memorium/in-memorium.md)
+  - [Maureen Ludgate](./characters/in-memorium/maureen-ludgate.md)
